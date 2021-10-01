@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def max_integer(my_list=[]):
-    store = 0
+    store = my_list[0]
     if my_list:
         for x in my_list:
             if x > store:
