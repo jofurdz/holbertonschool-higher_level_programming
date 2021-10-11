@@ -1,6 +1,6 @@
-Import ''say_my_name'' from ''3-say_my_name'' module:
+Import "say_my_name"
 
-        >>> say_my_name = __import__('3-say_my_name).say_my_name
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
 
 TESTS:
 
@@ -10,7 +10,7 @@ NORMAL:
 
 ONE STRING:
     >>> say_my_name("John")
-    My name is John
+    My name is John 
 
 INTEGERS:
     >>> say_my_name(420, 69)
@@ -19,7 +19,7 @@ INTEGERS:
     TypeError: first_name must be a string
 
 ONE INT:
-    >>> say_my_name(69, "Smith)
+    >>> say_my_name(69, "Smith")
     Traceback (most recent call last):
     ...
     TypeError: first_name must be a string
@@ -28,7 +28,7 @@ NO STRINGS:
     >>> say_my_name()
     Traceback (most recent call last):
     ...
-    TypeError: say_my_name() missing argument: first_name
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
 
 LIST:
     >>> say_my_name([John], [Smith])
