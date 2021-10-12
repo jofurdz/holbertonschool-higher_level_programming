@@ -4,7 +4,7 @@
 
 class Rectangle:
     """class rectangle"""
-    
+
     def __init__(self, width=0, height=0):
         if type(width) is not int:
             raise TypeError("width must be an integer")
