@@ -44,6 +44,20 @@ class Rectangle(Base):
         h = self.__height
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(i, x, y, w, h))
 
+    def update(self, *args):
+        """assigns argument to each attribute"""
+        for x in range(len(args)):
+            if x == 0:
+                self.id = args[x]
+            if x == 1:
+                self.__width = args[x]
+            if x == 2:
+                self.__height = args[x]
+            if x == 3:
+                self.__x = args[x]
+            if x == 4:
+                self.__y - args[x]
+
     @property
     def width(self):
         return self.__width
