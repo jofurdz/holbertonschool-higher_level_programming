@@ -29,6 +29,7 @@ class Base:
         elif value < 0:
             raise ValueError("{} must be >= 0".format(name))
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         """returns JSON representation of list of dictionaries"""
         newList = []
@@ -39,3 +40,19 @@ class Base:
         else:
             newList = json.dumps(list_dictionaries)
         return newList
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """writes the JSON representation of list_objs to a file"""
+        if list_objs is None:
+            list_objs = []
+
+        file = cls.__name__ + ".json"
+        newList = []
+
+        for x in list_objs:
+            newList.append(x.to_dictionary())
+
+        with open(file, "w") as f:
+            f.write(cls.to_json_string(newList))
+
