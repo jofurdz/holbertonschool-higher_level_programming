@@ -56,3 +56,11 @@ class Base:
         with open(file, "w") as f:
             f.write(cls.to_json_string(newList))
 
+    @staticmethod
+    def from_json_string(json_string):
+        """returns the list of JSON string representation"""
+        if json_string == None:
+            return ([""])
+        else:
+            return json.loads(json_string)
+
