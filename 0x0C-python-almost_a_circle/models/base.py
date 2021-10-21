@@ -2,6 +2,9 @@
 """class Base"""
 
 
+import json
+
+
 class Base:
     """instances that define Base"""
     __nb_objects = 0
@@ -25,3 +28,14 @@ class Base:
             raise TypeError("{} must be an integer".format(name))
         elif value < 0:
             raise ValueError("{} must be >= 0".format(name))
+
+    def to_json_string(list_dictionaries):
+        """returns JSON representation of list of dictionaries"""
+        newList = []
+        if list_dictionaries == None:
+            return newList
+        if list_dictionaries == "":
+            return newList
+        else:
+            newList = json.dumps(list_dictionaries)
+        return newList
