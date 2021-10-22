@@ -18,12 +18,14 @@ class Base:
             self.id = self
 
     def integer_validator(self, name, value):
+        """checks if int"""
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
         elif value <= 0:
             raise ValueError("{} must be > 0".format(name))
 
     def xyValidator(self, name, value):
+        """checks if char"""
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
         elif value < 0:
@@ -33,7 +35,7 @@ class Base:
     def to_json_string(list_dictionaries):
         """returns JSON representation of list of dictionaries"""
         newList = []
-        if list_dictionaries == None:
+        if list_dictionaries is None:
             return newList
         if list_dictionaries == "":
             return newList
@@ -59,7 +61,7 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """returns the list of JSON string representation"""
-        if json_string == None:
+        if json_string is None:
             return ([""])
         else:
             return json.loads(json_string)
@@ -75,7 +77,7 @@ class Base:
     def load_from_file(cls):
         """returns a list of all instances"""
         filename = cls.__name__ + ".json"
-        newList= []
+        newList = []
         try:
             with open(cls.__name__, 'r') as f:
                 jsonlist = cls.from_json_string(f.read())
@@ -84,4 +86,3 @@ class Base:
                 return newList
         except FileNotFoundError:
             return []
-

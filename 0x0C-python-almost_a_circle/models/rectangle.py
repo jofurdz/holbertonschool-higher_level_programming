@@ -48,7 +48,7 @@ class Rectangle(Base):
         """assigns argument to each attribute"""
         attributes = ['id', 'width', 'height', 'x', 'y']
         for j in range(len(args)):
-            if j  == 0:
+            if j == 0:
                 self.id = args[j]
             if j == 1:
                 self.__width = args[j]
@@ -103,4 +103,3 @@ class Rectangle(Base):
     def y(self, value):
         self.xyValidator("y", value)
         self.__y = value
-
