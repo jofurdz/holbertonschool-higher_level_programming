@@ -1,3 +1,3 @@
-/* script that lists all databases of my SQL server */
+-- script that lists all databases of my SQL server
 
 SHOW DATABASES;
