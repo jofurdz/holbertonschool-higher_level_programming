@@ -8,7 +8,7 @@ if __name__ == '__main__':
                          password=argv[2], dataBase=argv[3])
     cur = conn.cursor()
     cur.execute("SELECT id, name FROM states WHERE BINARY name = '{}'\
-                ORDER BY id ASC".format(argv[4]))
+                ORDER BY states.id ASC".format(argv[4]))
     poopla = cur.fetchall()
     for x in poopla:
         print(x)
