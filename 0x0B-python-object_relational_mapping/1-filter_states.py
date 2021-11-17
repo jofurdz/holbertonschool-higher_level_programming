@@ -12,4 +12,4 @@ if __name__ == "__main__":
         if x[1].startswith('N'):
             print(x)
     cur.close()
-    conn.close()
+    db.close()

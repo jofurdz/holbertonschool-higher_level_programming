@@ -11,4 +11,4 @@ if __name__ == "__main__":
     for x in poopla:
         print(x)
     cur.close()
-    conn.close()
+    db.close()
