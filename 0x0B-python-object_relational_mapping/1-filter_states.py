@@ -1,4 +1,4 @@
-#!/ur/bin/python3
+#!/usr/bin/python3
 """lists all states with N from database"""
 if __name__ == "__main__":
     import sys
