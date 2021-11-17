@@ -11,3 +11,5 @@ if __name__ == "__main__":
     for x in poopla:
         if x[1].startswith('N'):
             print(x)
+    cur.close()
+    conn.close()
