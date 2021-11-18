@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """takes arguments and displays all values that match"""
 if __name__ == "__main__":
+    from sys import argv
+    import MySQLdb
     db = MySQLdb.connect(host="localhost", port=3306, userName=argv[1],
                          password=argv[2], dataBase=argv[3])
     cur = db.cursor()
